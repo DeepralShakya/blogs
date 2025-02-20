@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Blog Project
 
-## Getting Started
+A simple and efficient Next.js blog application that supports pagination, search (with debounce), and dynamic blog posts.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Real-time search with debounce for better performance.
+- Pagination for browsing multiple posts.
+- Dynamic routes for individual blog posts.
+- Styled with Tailwind CSS.
+
+## Installation & Setup
+
+### Clone the Repository
+```sh
+git clone https://github.com/DeepralShakya/blogs.git
+cd blog
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install Dependencies
+```sh
+npm install  # or yarn install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Run the Development Server
+```sh
+npm run dev  # or yarn dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+nextjs-blog/
+│-- app/
+│   ├── page.js  # Main Blog Page
+│   ├── [slug]/page.js  # Individual Blog Post
+│-- components/
+│   ├── ui/  # shadcn Component
+│   ├── SkeletonCard.js  # Skeleton Loader
+│-- data/
+│   ├── data.js  # Static blog data
+│-- public/
+│-- styles/
+│-- package.json
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project uses the following dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/) - UI components
+- [Lodash](https://lodash.com/) - Utility functions (debounce used for search optimization)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
